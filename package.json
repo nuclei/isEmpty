@@ -1,0 +1,26 @@
+{
+  "name": "isemptyjs",
+  "version": "1.0.0",
+  "description": "A minimal package to set/remove a class to any empty input/textarea.",
+  "main": "dist/isempty.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuclei/isEmpty.git"
+  },
+  "keywords": [
+    "is-empty",
+    "empty",
+    "input-empty",
+    "form",
+    "input"
+  ],
+  "author": "Lukas Oppermann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuclei/isEmpty/issues"
+  },
+  "homepage": "https://github.com/nuclei/isEmpty#readme"
+}
