@@ -2,6 +2,7 @@
     var _config = {
         class: 'is-empty'
     };
+    var _nodeList;
     // toggle class
     var _toggleClass = function(element){
         if(element.value === ''){
@@ -12,17 +13,25 @@
     }
     // main function
     var isempty = function(nodeList, userConfig){
+        // manual check
+        if(typeof nodeList != "undefined" && typeof userConfig != "undefined" && NodeList.prototype.isPrototypeOf(_nodeList) ){
+            Array.prototype.forEach.call(_nodeList, function(el){
+                _toggleClass(el);
+            });
+        }
         // merge user config
         if(!NodeList.prototype.isPrototypeOf(nodeList)){
             userConfig = nodeList || {};
             nodeList = document.querySelectorAll('textarea, input:not([type=hidden]):not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"])');
         }
-
+        // store nodelist globally
+        _nodeList = nodeList;
+        // add config to global config
         for (var attrname in userConfig) {
             _config[attrname] = userConfig[attrname];
         }
 
-        Array.prototype.forEach.call(nodeList, function(el){
+        Array.prototype.forEach.call(_nodeList, function(el){
             // initial set class
             window.setTimeout(function(){
                 _toggleClass(el);
