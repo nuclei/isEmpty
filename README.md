@@ -40,3 +40,5 @@ isempty({
     'class': 'is-toggled'
 });
 ```
+
+You can manually check the inputs by just calling `isempty()`. The arguments you provided the first time will be stored and use for subsequent calls without any arguments. 
