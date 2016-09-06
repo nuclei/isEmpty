@@ -1,6 +1,6 @@
 {
   "name": "isemptyjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal package to set/remove a class to any empty input/textarea.",
   "main": "dist/isempty.js",
   "scripts": {
